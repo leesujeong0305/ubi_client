@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 //metadata는 서버 컴포넌트에서만 사용할 수 있습니다. 따라서 use client가 선언된 파일에서 metadata를 함께 사용할 수 없습니다.
 //클라이언트 컴포넌트에서 필요한 로직(예: SessionProvider)은 별도의 컴포넌트로 분리하여 처리합니다.
 
-//import { Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import SessionProviderWrapper from "./SessionProviderWrapper";
+import React from "react";
 
-//const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,10 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <body className={inter.className}>{children}</body> */}
-      <body>
+      <body className={inter.className}>{children}</body>
+      {/* <body>
         <SessionProviderWrapper>{children}</SessionProviderWrapper>
-      </body>
+      </body> */}
     </html>
   );
 }

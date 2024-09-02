@@ -1,7 +1,19 @@
 import Image from "next/image";
 import Login from './login/page'
 
+// export async function getServerSideProps(context) {
+//   // 서버에서 API 호출 및 데이터 가져오기
+//   const res = await fetch('http://localhost:3000/api/some-endpoint');
+//   const data = await res.json();
+
+//   return {
+//     props: { data },
+//   };
+// }
+
 export default function Home() {
+
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -109,6 +121,8 @@ export default function Home() {
           </p>
         </a>
       </div>
+      <div><Login /></div>
+
     </main>
   );
   //return <Login />;
